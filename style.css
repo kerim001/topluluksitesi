@@ -20,29 +20,31 @@ body{
 }
 
 .headerr h4 {
-    margin: 0; /* Başlık etrafındaki boşluğu kaldırır */
-    position: absolute; /* Mutlak konumlandırma kullanarak başlığı hareket ettirir */
-    left: 50%; /* Sol kenarını ekranın ortasına yerleştirir */
-    transform: translateX(-50%); /* Başlığı yatay olarak ortalar */
+    font-size: large;
+    margin: 0; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); /* önemli */
 }
 .container {
-    max-width: 1920px; /* Maksimum genişlik belirleme */
-    width: 100%; /* Genişliği tamamen kapsamasını sağlama */
-    position: relative;
-    display: flex;
-    justify-content: center; /* Kartları yatayda merkezlemek için */
-    flex-wrap: wrap; /* İçeriğin sığmaması durumunda alt satıra geçmesini sağlar */
-    gap: 10px; /* Kartlar arasındaki boşluk */
+    max-width: 1920px; 
+    width: 100%; 
+    position: relative; /* önemli */
+    display: flex;  /* önemli */
+    justify-content: center; 
+    flex-wrap: wrap;    /* önemli */
+    gap: 10px;  /* önemli */
 }
 .container .card {
-    flex: 1 0 200px; /* Kartların esnek genişliği */
-    max-width: 300px; /* Kartların maksimum genişliği */
-    margin-bottom: 20px; /* Kartların alt boşluğu */
+    flex: 1 0 320px;    /* önemli */
+    max-width: 400px;
+    margin-bottom: 20px;
     border: 1px solid #ece3e3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
 }
+
 
 
 

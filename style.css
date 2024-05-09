@@ -8,6 +8,7 @@ body{
 .headerr {
     background-color: #2E4E8C;
     padding: 0px;
+    margin-bottom: 10px;
     color: aliceblue;
     max-height: 110px;
     display: flex;
@@ -25,14 +26,13 @@ body{
     transform: translateX(-50%); /* Başlığı yatay olarak ortalar */
 }
 .container {
-    padding: 10px;
-    max-width: 1000px; /* Maksimum genişlik belirleme */
+    max-width: 1920px; /* Maksimum genişlik belirleme */
     width: 100%; /* Genişliği tamamen kapsamasını sağlama */
     position: relative;
     display: flex;
     justify-content: center; /* Kartları yatayda merkezlemek için */
     flex-wrap: wrap; /* İçeriğin sığmaması durumunda alt satıra geçmesini sağlar */
-    gap: 20px; /* Kartlar arasındaki boşluk */
+    gap: 10px; /* Kartlar arasındaki boşluk */
 }
 .container .card {
     flex: 1 0 200px; /* Kartların esnek genişliği */

@@ -20,39 +20,6 @@
     
         <div class="container">
 
-            <!-- <div class="card">
-                
-                <a href="buraya net sitesi yapıştır">
-                    <img src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png" alt="" title="BAŞLIK">
-                </a>
-                <h2>ÇOMÜ E-SPOR</h2>    
-                <p class="p_icerik">içerik yazcaz uzun uzadıya denersek ne olur</p>
-                <a href="buraya net sitesi yapıştır">devamı...</a>
-                
-            </div>
-           
-            <div class="card">
-                
-                <a href="buraya net sitesi yapıştır">
-                    <img src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png" alt="" title="BAŞLIK">
-                </a>
-                <h2>ÇOMÜ E-SPOR</h2>    
-                <p class="p_icerik">içerik yazcaz uzun uzadıya denersek ne olur</p>
-                <a href="buraya net sitesi yapıştır">devamı...</a>
-                
-            </div>
-
-            <div class="card">
-                
-                <a href="buraya net sitesi yapıştır">
-                    <img src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png" alt="" title="BAŞLIK">
-                </a>
-                <h2>ÇOMÜ E-SPOR</h2>    
-                <p class="p_icerik">içerik yazcaz uzun uzadıya denersek ne olur</p>
-                <a href="buraya net sitesi yapıştır">devamı...</a>
-                
-            </div> -->
-
             <div id="cardContainer" class="container">
                 <!-- Kartlar burada oluşturulacak -->
             </div>
@@ -60,54 +27,66 @@
 
         </div>
 
-    <script>
-         // Kartları oluşturacak fonksiyon
- function createCard(title, imageUrl, content, linkUrl) {
-    var cardDiv = document.createElement("div");
-    cardDiv.className = "card";
+        <script>
+            // Kartları oluşturacak fonksiyon
+            function createCard(title, imageUrl, content, linkUrl) {
+                var cardDiv = document.createElement("div"); // Yeni bir <div> elementi oluştur
+                cardDiv.className = "card"; // Oluşturulan <div> elementine "card" sınıfını ekle
+        
+                var image = document.createElement("img"); // Yeni bir <img> elementi oluştur
+                image.src = imageUrl; // <img> elementinin src özelliğini belirle
+                image.alt = title; // <img> elementinin alt özelliğini belirle
+        
+                var cardTitle = document.createElement("h2"); // Yeni bir <h2> elementi oluştur
+                cardTitle.textContent = title; // <h2> elementinin içeriğini belirle
+        
+                var cardContent = document.createElement("p"); // Yeni bir <p> elementi oluştur
+                cardContent.className = "p_icerik"; // Oluşturulan <p> elementine "p_icerik" sınıfını ekle
+                cardContent.textContent = content; // <p> elementinin içeriğini belirle
+        
+                var link = document.createElement("a"); // Yeni bir <a> elementi oluştur
+                link.href = linkUrl; // <a> elementinin href özelliğini belirle
+                link.textContent = "Devamı..."; // <a> elementinin içeriğini belirle
+        
+                // Oluşturulan elementleri kartın içine yerleştir
+                cardDiv.appendChild(image);
+                cardDiv.appendChild(cardTitle);
+                cardDiv.appendChild(cardContent);
+                cardDiv.appendChild(link);
+        
+                return cardDiv; // Oluşturulan kartı döndür
+            }
+        
+            // Örnek kartlar için bir dizi
+            var cards = [
+                { title: "Örnek Kart 11", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
 
-    var image = document.createElement("img");
-    image.src = imageUrl;
-    image.alt = title;
-
-    var cardTitle = document.createElement("h2");
-    cardTitle.textContent = title;
-
-    var cardContent = document.createElement("p");
-    cardContent.className = "p_icerik";
-    cardContent.textContent = content;
-
-    var link = document.createElement("a");
-    link.href = linkUrl;
-    link.textContent = "Devamı...";
-
-    cardDiv.appendChild(image);
-    cardDiv.appendChild(cardTitle);
-    cardDiv.appendChild(cardContent);
-    cardDiv.appendChild(link);
-
-    return cardDiv;
-}
-
-// Örnek kartlar için bir dizi
-var cards = [
-    { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
-    { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
-    { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
-    { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
-    { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
-
-    { title: "Örnek Kart 2", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir başka örnek kart içeriğidir.", linkUrl: "https://example.com/page2" }
-    // İstediğiniz kadar kart ekleyebilirsiniz
-];
-
-// Kartları HTML'e ekleme
-var cardContainer = document.getElementById("cardContainer");
-cards.forEach(function(cardData) {
-    var card = createCard(cardData.title, cardData.imageUrl, cardData.content, cardData.linkUrl);
-    cardContainer.appendChild(card);
-});
-    </script>
+                // Diğer kartlar...
+            ];
+        
+            // Kartları HTML'e ekleme
+            var cardContainer = document.getElementById("cardContainer"); // HTML'de belirtilen "cardContainer" ID'ye sahip elementi bul
+            cards.forEach(function(cardData) {
+                var card = createCard(cardData.title, cardData.imageUrl, cardData.content, cardData.linkUrl); // Her kart için createCard fonksiyonunu kullanarak bir kart oluştur
+                cardContainer.appendChild(card); // Oluşturulan kartı "cardContainer" elementine ekle
+            });
+        </script>
+        
     
 </body>
 </html>

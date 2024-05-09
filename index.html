@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basit Site</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    
 </head>
 <body>
     <header>
@@ -14,6 +16,8 @@
             </a>
             <h4>Çanakkale Onsekiz Mart Üniversitesi</h4>
         </div>
+        </header>
+    
         <div class="container">
 
             <div class="card">
@@ -38,8 +42,67 @@
                 
             </div>
 
+            <div class="card">
+                
+                <a href="buraya net sitesi yapıştır">
+                    <img src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png" alt="" title="BAŞLIK">
+                </a>
+                <h2>ÇOMÜ E-SPOR</h2>    
+                <p class="p_icerik">içerik yazcaz uzun uzadıya denersek ne olur</p>
+                <a href="buraya net sitesi yapıştır">devamı...</a>
+                
+            </div>
+
+            <div id="cardContainer" class="container">
+                <!-- Kartlar burada oluşturulacak -->
+            </div>
+            
+
         </div>
-    </header>
+
+    <!-- <script>
+         // Kartları oluşturacak fonksiyon
+ function createCard(title, imageUrl, content, linkUrl) {
+    var cardDiv = document.createElement("div");
+    cardDiv.className = "card";
+
+    var image = document.createElement("img");
+    image.src = imageUrl;
+    image.alt = title;
+
+    var cardTitle = document.createElement("h2");
+    cardTitle.textContent = title;
+
+    var cardContent = document.createElement("p");
+    cardContent.className = "p_icerik";
+    cardContent.textContent = content;
+
+    var link = document.createElement("a");
+    link.href = linkUrl;
+    link.textContent = "Devamı...";
+
+    cardDiv.appendChild(image);
+    cardDiv.appendChild(cardTitle);
+    cardDiv.appendChild(cardContent);
+    cardDiv.appendChild(link);
+
+    return cardDiv;
+}
+
+// Örnek kartlar için bir dizi
+var cards = [
+    { title: "Örnek Kart 1", imageUrl: "https://example.com/image1.jpg", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+    { title: "Örnek Kart 2", imageUrl: "https://example.com/image2.jpg", content: "Bu bir başka örnek kart içeriğidir.", linkUrl: "https://example.com/page2" }
+    // İstediğiniz kadar kart ekleyebilirsiniz
+];
+
+// Kartları HTML'e ekleme
+var cardContainer = document.getElementById("cardContainer");
+cards.forEach(function(cardData) {
+    var card = createCard(cardData.title, cardData.imageUrl, cardData.content, cardData.linkUrl);
+    cardContainer.appendChild(card);
+});
+    </script> -->
     
 </body>
 </html>

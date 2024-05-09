@@ -24,16 +24,20 @@ body{
     left: 50%; /* Sol kenarını ekranın ortasına yerleştirir */
     transform: translateX(-50%); /* Başlığı yatay olarak ortalar */
 }
-.container{
+.container {
     padding: 10px;
+    max-width: 1000px; /* Maksimum genişlik belirleme */
+    width: 100%; /* Genişliği tamamen kapsamasını sağlama */
+    position: relative;
     display: flex;
-    background-color: rgb(253, 253, 253);
-    
+    justify-content: center; /* Kartları yatayda merkezlemek için */
+    flex-wrap: wrap; /* İçeriğin sığmaması durumunda alt satıra geçmesini sağlar */
+    gap: 20px; /* Kartlar arasındaki boşluk */
 }
-.container .card{
-    min-width: 240px;
-    max-width: 240px;
-    margin-left: 10px;
+.container .card {
+    flex: 1 0 200px; /* Kartların esnek genişliği */
+    max-width: 300px; /* Kartların maksimum genişliği */
+    margin-bottom: 20px; /* Kartların alt boşluğu */
     border: 1px solid #ece3e3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;

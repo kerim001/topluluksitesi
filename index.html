@@ -33,6 +33,9 @@
                 var cardDiv = document.createElement("div"); // Yeni bir <div> elementi oluştur
                 cardDiv.className = "card"; // Oluşturulan <div> elementine "card" sınıfını ekle
         
+                var imgA=document.createElement("a") // Yeni bir <a> elementi oluşturur
+                imgA.className="imagediv"; //imagediv adlı sınıf elementini verdik buna çünkü daha sonra aşağıda buna image elementini appendchild ile atayacağız
+                imgA.href=linkUrl; // a ya link bağladık
                 var image = document.createElement("img"); // Yeni bir <img> elementi oluştur
                 image.src = imageUrl; // <img> elementinin src özelliğini belirle
                 image.alt = title; // <img> elementinin alt özelliğini belirle
@@ -49,7 +52,8 @@
                 link.textContent = "Devamı..."; // <a> elementinin içeriğini belirle
         
                 // Oluşturulan elementleri kartın içine yerleştir
-                cardDiv.appendChild(image);
+                imgA.appendChild(image)
+                cardDiv.appendChild(imgA);
                 cardDiv.appendChild(cardTitle);
                 cardDiv.appendChild(cardContent);
                 cardDiv.appendChild(link);
@@ -59,7 +63,7 @@
         
             // Örnek kartlar için bir dizi
             var cards = [
-                { title: "Örnek Kart 11", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
+                { title: "Örnek Kart 11", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1"},
                 { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
                 { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },
                 { title: "Örnek Kart 1", imageUrl: "https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png", content: "Bu bir örnek kart içeriğidir.", linkUrl: "https://example.com/page1" },

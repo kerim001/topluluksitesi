@@ -19,12 +19,18 @@ body{
     padding: 10px;
 }
 
-.headerr h4 {
+.headerr .ana_baslik {
     font-size: large;
     margin: 0; 
     position: absolute; 
     left: 50%; 
     transform: translateX(-50%); /* önemli */
+}
+
+h5{
+    margin-block: 15px;
+    margin-left: 10px;
+    font-size: 30px;
 }
 .container {
     max-width: 1920px; 
@@ -37,12 +43,63 @@ body{
 }
 .container .card {
     flex: 1 0 320px;    /* önemli */
-    max-width: 400px;
+    max-width: 320px;
     margin-bottom: 20px;
     border: 1px solid #ece3e3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
+}
+.login_ekrani .login_h4{
+    align-items: center;
+    position: absolute;
+    left:80%;
+    transform: translateY(-150%); /* önemli */
+    color: aliceblue;
+}
+
+
+
+.container_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card_login {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.username,.passw {
+    margin-bottom: 20px;
+}
+
+.username input,.passw input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login_button,.register_button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2E4E8C;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b1c5e8;
 }
 
 

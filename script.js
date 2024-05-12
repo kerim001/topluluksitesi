@@ -3,12 +3,12 @@ function KartOlustur(baslik, ResimUrl,icerik, linkUrl) {
     var cardDiv = document.createElement("div"); // Yeni bir div oluşturur
     cardDiv.className = "card"; // Oluşturulan div elementine "card" sınıfını ekle
 
-    var imgA=document.createElement("a") // Yeni bir <a> elementi oluşturur
+    var imgA = document.createElement("a") // Yeni bir <a> elementi oluşturur
     imgA.className="imagediv"; //imagediv adlı sınıf elementini verdik buna çünkü daha sonra aşağıda buna image elementini appendchild ile atayacağız
-    imgA.href=linkUrl; // a ya link bağladık
+    imgA.href = linkUrl; // a ya link bağladık
     var image = document.createElement("img"); // Yeni bir <img> elementi oluştur
     image.src = ResimUrl; // <img> elementinin src özelliğini belirle
-    image.alt = baslik; // <img> elementinin alt özelliğini belirle
+   // image.alt = baslik; // <img> elementinin alt özelliğini belirle OPSİYONEL KULLANILABİLİR ALT KULLANILIYOR GENELDE AMA MANTIĞINI TAM BİLMEDİĞİMDEN ŞİMDİ YAZMAIDM
     image.width=200;
 
     

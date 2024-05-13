@@ -6,6 +6,7 @@ function KartOlustur(baslik, ResimUrl,icerik, linkUrl) {
     var imgA = document.createElement("a") // Yeni bir <a> elementi oluşturur
     imgA.className="imagediv"; //imagediv adlı sınıf elementini verdik buna çünkü daha sonra aşağıda buna image elementini appendchild ile atayacağız
     imgA.href = linkUrl; // a ya link bağladık
+   
     var image = document.createElement("img"); // Yeni bir <img> elementi oluştur
     image.src = ResimUrl; // <img> elementinin src özelliğini belirle
    // image.alt = baslik; // <img> elementinin alt özelliğini belirle OPSİYONEL KULLANILABİLİR ALT KULLANILIYOR GENELDE AMA MANTIĞINI TAM BİLMEDİĞİMDEN ŞİMDİ YAZMAIDM
@@ -55,6 +56,7 @@ var cards = [
 
 // Kartları HTML'e ekleme
 var cardContainer = document.getElementById("cardContainer"); // HTML'de belirtilen "cardContainer" ID'ye sahip elementi bul
+
 cards.forEach(function(cardData) {
     var card = KartOlustur(cardData.baslik, cardData.ResimUrl, cardData.icerik, cardData.linkUrl); // Her kart için KartOlustur fonksiyonunu kullanarak bir kart oluştur
     cardContainer.appendChild(card); // Oluşturulan kartı "cardContainer" elementine ekle

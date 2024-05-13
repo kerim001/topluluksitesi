@@ -13,6 +13,29 @@
                 <img class="logo" alt="Çanakkale Onsekiz Mart Üniversitesi" src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png">
             </a>
             <h4 class="ana_baslik">Çanakkale Onsekiz Mart Üniversitesi Kulüpleri</h4>
+            <div class="nav_bar">
+                <div>
+                    <a href="index.html"> 
+                        <h4>
+                            Anasayfa 
+                        </h4>
+                    </a>
+                </div>
+                <div>
+                <a href="login.html">
+                    <h4 class="login_h4">
+                        Kayıt Ol / Giriş Yap
+                    </h4>
+                </a>
+                </div>
+                <div>
+                    <a href="takvim.html">
+                        <h4 class="takvim_h4" >
+                            Takvim
+                        </h4>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
     
@@ -25,12 +48,19 @@
             <div class="passw">
                 <input id='username_passw' type="password" placeholder="şifrenizi yazın">
             </div>
-            <button class="login_button" onclick="login()">Giriş Yap</button>
-            <button class="register_button" onclick="register()">Kayıt Ol</button>
+            <button class="login_button" onclick="login(),addUser()">Giriş Yap</button>
+            <button class="register_button" onclick="register(),addUser()">Kayıt Ol</button>
         
         </div>
+
+        <!-- <div class="users">
+            <ul id="users_ul">
+
+            </ul>
+        </div> -->
+        
     </div>
-    
+
     <script src="login.js"></script>
 </body>
 </html>

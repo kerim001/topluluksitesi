@@ -1,13 +1,15 @@
 
-// Kayıt işlevi
-function register() {
-    var username = document.getElementById('username_input').value;
-    var password = document.getElementById('username_passw').value;
+var users = [
+    //{username: isim , password: şifre} olacak mantığnında
+];
 
-    // Yerel depolamada kullanıcıları sakla
-    var users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push({ username: username, password: password });
-    localStorage.setItem('users', JSON.stringify(users));
+// Kayıt ol işlevi
+function register() {
+    var usernameInput = document.querySelector('.username input').value;
+    var passwordInput = document.querySelector('.passw input').value;
+
+    // Yeni kullanıcıyı eklemek
+    users.push({ username: usernameInput, password: passwordInput });
 
     alert('Kayıt işlemi başarıyla tamamlandı!');
 }
@@ -42,6 +44,22 @@ document.getElementById('username_passw').addEventListener('keydown',function(ev
     }
 })
 
+// const ListContainer = document.getElementById("users_ul")
+// function addUser(){
+//     let li = document.createElement("li")
+//     var usernameInput = document.querySelector('.username input').value;
+//     li.innerHTML = usernameInput;
+//     ListContainer.appendChild(li)
+//     let span = document.createElement("span");
+//      // span adlı bir eleman oluşturuyoruz ve buna span diyoruz
+//      span.innerHTML="\u00d7"
+//      //Oluşturulan <span> elementinin içeriği, kapama işaretini temsil eden bir Unicode karakteri olan "\u00d7" ile ayarlanıyor.
+//      li.appendChild(span)
+//     //  Bu satır, daha önce oluşturulan <li> elementine, içeriği kapama işareti olan <span> elementini ekler.
+//     saveData();
+// }
 
-
-
+// function saveData(){                
+//     // burası save data fonksiyonu bunun sayesinde set işlemini yapıyoruz
+//     localStorage.setItem("data",ListContainer.innerHTML)
+// }

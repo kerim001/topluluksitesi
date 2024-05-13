@@ -7,12 +7,13 @@ body{
 
 .headerr {
     background-color: #2E4E8C;
-    padding: 0px;
+    padding: 10px;
     margin-bottom: 10px;
     color: aliceblue;
     max-height: 110px;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Yatayda yayarak yerleştir */
 }
 
 .headerr img{
@@ -21,10 +22,7 @@ body{
 
 .headerr .ana_baslik {
     font-size: large;
-    margin: 0; 
-    position: absolute; 
-    left: 50%; 
-    transform: translateX(-50%); /* önemli */
+    margin: 0;
 }
 
 h5{
@@ -50,12 +48,28 @@ h5{
     padding: 10px;
     text-align: center;
 }
-.login_ekrani .login_h4{
+.nav_bar {
+    display: flex;
     align-items: center;
-    position: absolute;
-    left:80%;
-    transform: translateY(-150%); /* önemli */
     color: aliceblue;
+    margin-right: 20px; /* Sağa boşluk ekleyerek sağ üst köşeye yerleştir */
+}
+
+.nav_bar h4{
+    color: aliceblue;
+    padding: 5px;
+    background-color:#3d60a5;
+    border-radius: 40px;
+    margin-right: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.nav_bar h4:hover{
+    background-color: #b1c5e8;
+}
+/* Ek olarak, alt çizgiyi kesin olarak kaldırmak için */
+.nav_bar h4, .nav_bar h4:hover {
+    text-decoration: none !important;
 }
 
 

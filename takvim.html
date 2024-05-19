@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Giriş/Kayıt ol Ekranı</title>
+    <title>Kulüp Takvimi</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Stil dosyası eklenir -->
 </head>
 <body>
     <header>
@@ -45,29 +45,25 @@
             </div>
         </div>
     </header>
-    
-    <div class="container_login">
-        <div class="card_login">
-
-            <div class="username">
-                <input id='username_input' type="text" placeholder="lütfen kullanıcı adınızı yazınız">
-            </div>
-            <div class="passw">
-                <input id='username_passw' type="password" placeholder="şifrenizi yazın">
-            </div>
-            <button class="login_button" onclick="login(),addUser()">Giriş Yap</button>
-            <button class="register_button" onclick="register(),addUser()">Kayıt Ol</button>
-        
+    <div class="calendar"> <!-- Takvim bölümü -->
+        <div class="month">
+            <div class="prev">&#10094;</div> <!-- Önceki ay butonu -->
+            <div class="next">&#10095;</div> <!-- Sonraki ay butonu -->
+            <div class="month-name">Mart 2021</div> <!-- Ay ve yıl bilgisi -->
         </div>
-
-        <!-- <div class="users">
-            <ul id="users_ul">
-
-            </ul>
-        </div> -->
+        <ul class="weekdays"> <!-- Haftanın günleri -->
+            <li>Pzt</li> <!-- Pazartesi -->
+            <li>Sal</li> <!-- Salı -->
+            <li>Çar</li> <!-- Çarşamba -->
+            <li>Per</li> <!-- Perşembe -->
+            <li>Cum</li> <!-- Cuma -->
+            <li>Cmt</li> <!-- Cumartesi -->
+            <li>Paz</li> <!-- Pazar -->
+        </ul>
+        <ul class="days"></ul> <!-- Ayın günleri burada listelenir -->
         
     </div>
 
-    <script src="login.js"></script>
+    <script src="takvim.js"></script> <!-- JavaScript dosyası eklenir -->
 </body>
 </html>

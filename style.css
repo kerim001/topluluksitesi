@@ -25,11 +25,37 @@ body{
     margin: 0;
 }
 
-h5{
+.nav_bar {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    margin-right: 20px; 
+}
+
+.nav_bar h4{
+    color: aliceblue;
+    padding: 5px;
+    background-color:#3d60a5;
+    border-radius: 40px;
+    margin-right: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.nav_bar h4:hover{
+    background-color: #b1c5e8;
+}
+
+/* Header kısmının css bitiş */
+
+
+
+/* index.html css */
+.külüplerimiz{
     margin-block: 15px;
     margin-left: 10px;
     font-size: 30px;
 }
+
 .container {
     max-width: 1920px; 
     width: 100%; 
@@ -48,37 +74,17 @@ h5{
     padding: 10px;
     text-align: center;
 }
-.nav_bar {
-    display: flex;
-    align-items: center;
-    color: aliceblue;
-    margin-right: 20px; /* Sağa boşluk ekleyerek sağ üst köşeye yerleştir */
-}
-
-.nav_bar h4{
-    color: aliceblue;
-    padding: 5px;
-    background-color:#3d60a5;
-    border-radius: 40px;
-    margin-right: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-.nav_bar h4:hover{
-    background-color: #b1c5e8;
-}
-/* Ek olarak, alt çizgiyi kesin olarak kaldırmak için */
-.nav_bar h4, .nav_bar h4:hover {
-    text-decoration: none !important;
-}
+/* İndex.html css */
 
 
 
+
+/* login.html css */
 .container_login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .card_login {
@@ -115,8 +121,114 @@ h5{
 button:hover {
     background-color: #b1c5e8;
 }
+/* login.html css */
+
+
+
+/* register.html css */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 440px; 
+    max-width: 100%; /* Ekran boyutuna göre genişliğin %100'ünü aşmaması için */
+    margin: auto; /* Yatayda ortalamak için */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2{
+    text-align: center;
+}
+
+.form-container label {
+    margin-top: 10px;
+}
+
+.form-container input, select, button {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-container button {
+    background-color: #2E4E8C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #b1c5e8;
+}
+/* register.html css */
 
 
 
 
 
+/* takvim.html css */
+.calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+}
+
+.month-name {
+    font-size: 20px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+.weekdays li {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.days li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.days li.today {
+    background-color: #f2f2f2;
+}
+
+.days li.event {
+    background-color: #2E4E8C;
+    color: white;
+    font-weight: bold;
+}
+/* takvim.html css */

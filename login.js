@@ -44,22 +44,3 @@ document.getElementById('username_passw').addEventListener('keydown',function(ev
     }
 })
 
-// const ListContainer = document.getElementById("users_ul")
-// function addUser(){
-//     let li = document.createElement("li")
-//     var usernameInput = document.querySelector('.username input').value;
-//     li.innerHTML = usernameInput;
-//     ListContainer.appendChild(li)
-//     let span = document.createElement("span");
-//      // span adlı bir eleman oluşturuyoruz ve buna span diyoruz
-//      span.innerHTML="\u00d7"
-//      //Oluşturulan <span> elementinin içeriği, kapama işaretini temsil eden bir Unicode karakteri olan "\u00d7" ile ayarlanıyor.
-//      li.appendChild(span)
-//     //  Bu satır, daha önce oluşturulan <li> elementine, içeriği kapama işareti olan <span> elementini ekler.
-//     saveData();
-// }
-
-// function saveData(){                
-//     // burası save data fonksiyonu bunun sayesinde set işlemini yapıyoruz
-//     localStorage.setItem("data",ListContainer.innerHTML)
-// }

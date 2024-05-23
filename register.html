@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register_style.css">
-    
-    <title>Kayıt</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Kayıt Ol</title>
 </head>
 <body>
     <header>
@@ -25,7 +24,7 @@
                 <div>
                 <a href="login.html">
                     <h4 class="login_h4">
-                        Kayıt Ol / Giriş Yap
+                        Yetkili Giriş
                     </h4>
                 </a>
                 </div>
@@ -46,50 +45,38 @@
             </div>
         </div>
     </header>
-    <!-- Formun bulunduğu konteyner div -->
+    
+    
 <div class="form-container">
-    <!-- Form başlığı -->
+    
     <h2>Kayıt Formu</h2>
     
-    <!-- Kayıt formu -->
-    <form id="registerForm">
+    <form class="form" id="registerForm">
         
-        <!-- İsim alanı etiketi ve giriş kutusu -->
-        <!-- 'label' elementi, form kontrol elemanlarına açıklama eklemek için kullanılır -->
+        
         <label for="firstName">İsim:</label>
-        <!-- 'label' elementinin 'for' özelliği, ilgili 'input' elemanının 'id' değerini belirtir -->
         <input type="text" id="firstName" name="firstName" required>
-        <!-- 'input' elemanı kullanıcıdan veri almak için kullanılır -->
-        <!-- 'type="text"' metin girişi sağlar -->
-        <!-- 'required' özelliği bu alanın doldurulmasının zorunlu olduğunu belirtir -->
-
-        <!-- Soyisim alanı etiketi ve giriş kutusu -->
+        
         <label for="lastName">Soyisim:</label>
         <input type="text" id="lastName" name="lastName" required>
 
-        <!-- Email alanı etiketi ve giriş kutusu -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-        <!-- 'type="email"' kullanıcıdan geçerli bir e-posta adresi girmesini sağlar -->
 
-        <!-- Telefon Numarası alanı etiketi ve giriş kutusu -->
+        
         <label for="phone">Telefon Numarası:</label>
         <input type="tel" id="phone" name="phone" required>
-        <!-- 'type="tel"' kullanıcıdan telefon numarası girmesini sağlar -->
+        
 
-        <!-- Kulüp seçimi için açılır menü etiketi ve menü -->
+        
         <label for="club">Kulüp Seçiniz:</label>
         <select id="club" name="club" required>
             <option value="">Kulüp Seçiniz</option>
-            <!-- Kulüp seçenekleri JavaScript ile doldurulacak -->
+           
         </select>
-        <!-- 'select' elemanı bir açılır menü sağlar -->
-        <!-- 'option' elemanları menüdeki seçenekleri belirler -->
-
-        <!-- Gönder butonu -->
+        
         <button type="submit">Gönder</button>
-        <!-- 'button' elemanı bir buton oluşturur -->
-        <!-- 'type="submit"' formun gönderilmesini sağlar -->
+        
     </form>
 </div>
 

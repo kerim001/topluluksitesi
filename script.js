@@ -1,5 +1,5 @@
 // Kartları oluşturacak fonksiyon
-function KartOlustur(baslik, ResimUrl,icerik, linkUrl) {
+function KartOlustur(baslik, ResimUrl,icerik, linkUrl,instagramUrl,twitterUrl) {
     var cardDiv = document.createElement("div"); // Yeni bir div oluşturur
     cardDiv.className = "card"; // Oluşturulan div elementine "card" sınıfını ekle
 
@@ -24,19 +24,51 @@ function KartOlustur(baslik, ResimUrl,icerik, linkUrl) {
     link.href = linkUrl; // <a> elementinin href özelliğini belirle
     link.textContent = "Devamı..."; // <a> elementinin içeriğini belirle
 
+    
+    var sosyal =document.createElement("div"); // bir div elementi oluşturduk ve buna sosyal dedik
+    sosyal.className="sosyal";
+
+    var instagram = document.createElement("a");
+    instagram.href=instagramUrl;
+    instagram.textContent="";
+    
+    var instaImage = document.createElement("img");
+    instaImage.src = "images/insta.png"; // Burada "images" klasöründeki "insta.png" dosyasının yolunu belirtiyorsunuz.
+    instaImage.width = 30;
+
+    
+
+    var twitter = document.createElement("a");
+    twitter.href=twitterUrl;
+    twitter.textContent="";
+    
+    var twitterImage = document.createElement("img");
+    twitterImage.src = "images/twitter.png"; // Burada "images" klasöründeki "insta.png" dosyasının yolunu belirtiyorsunuz.
+    twitterImage.width = 27;
+
+
+    
     // Oluşturulan elementleri kartın içine yerleştir
     imgA.appendChild(image)
     cardDiv.appendChild(imgA);
     cardDiv.appendChild(cardbaslik);
     cardDiv.appendChild(cardContent);
     cardDiv.appendChild(link);
+    
+    instagram.appendChild(instaImage)
+    sosyal.appendChild(instagram);
+    
+    twitter.appendChild(twitterImage)
+    sosyal.appendChild(twitter)
+    
+    cardDiv.appendChild(sosyal);
 
     return cardDiv; // Oluşturulan kartı döndür
 }
 
 // Örnek kartlar için bir dizi
 var cards = [
-    { baslik: "ÇOMÜ E-Spor", ResimUrl: "https://scontent.fesb7-1.fna.fbcdn.net/v/t39.30808-1/326491669_511010991173758_4247924090873419947_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HRK9GGHPbGYQ7kNvgGmrl5r&_nc_ht=scontent.fesb7-1.fna&oh=00_AfAXPYKkJzACz3W1hsrH26Rc_hQqXcKDwJ3702OUsW5sfg&oe=6642AA81", icerik: "topluluğumuz e spor ile alakalıdır daha çok içerik için bizi sosyal medya adreslerimizden takip etmeyi unutmayın", linkUrl: "https://www.instagram.com/comuespor/"},
+    { baslik: "ÇOMÜ E-Spor", ResimUrl: "https://scontent.fesb7-1.fna.fbcdn.net/v/t39.30808-1/326491669_511010991173758_4247924090873419947_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HRK9GGHPbGYQ7kNvgGmrl5r&_nc_ht=scontent.fesb7-1.fna&oh=00_AfAXPYKkJzACz3W1hsrH26Rc_hQqXcKDwJ3702OUsW5sfg&oe=6642AA81", icerik: "topluluğumuz e spor ile alakalıdır daha çok içerik için bizi sosyal medya adreslerimizden takip etmeyi unutmayın", linkUrl: "https://www.instagram.com/comuespor/",instagram:"https://www.instagram.com/comuespor/",twitter:"https://www.instagram.com/ismail_kerim7"},
     { baslik: "ÇOMÜ E-Spor", ResimUrl: "https://scontent.fesb7-1.fna.fbcdn.net/v/t39.30808-1/326491669_511010991173758_4247924090873419947_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HRK9GGHPbGYQ7kNvgGmrl5r&_nc_ht=scontent.fesb7-1.fna&oh=00_AfAXPYKkJzACz3W1hsrH26Rc_hQqXcKDwJ3702OUsW5sfg&oe=6642AA81", icerik: "topluluğumuz e spor ile alakalıdır daha çok içerik için bizi sosyal medya adreslerimizden takip etmeyi unutmayın", linkUrl: "https://www.instagram.com/comuespor/"},
     { baslik: "ÇOMÜ E-Spor", ResimUrl: "https://scontent.fesb7-1.fna.fbcdn.net/v/t39.30808-1/326491669_511010991173758_4247924090873419947_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HRK9GGHPbGYQ7kNvgGmrl5r&_nc_ht=scontent.fesb7-1.fna&oh=00_AfAXPYKkJzACz3W1hsrH26Rc_hQqXcKDwJ3702OUsW5sfg&oe=6642AA81", icerik: "topluluğumuz e spor ile alakalıdır daha çok içerik için bizi sosyal medya adreslerimizden takip etmeyi unutmayın", linkUrl: "https://www.instagram.com/comuespor/"},
     { baslik: "ÇOMÜ E-Spor", ResimUrl: "https://scontent.fesb7-1.fna.fbcdn.net/v/t39.30808-1/326491669_511010991173758_4247924090873419947_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HRK9GGHPbGYQ7kNvgGmrl5r&_nc_ht=scontent.fesb7-1.fna&oh=00_AfAXPYKkJzACz3W1hsrH26Rc_hQqXcKDwJ3702OUsW5sfg&oe=6642AA81", icerik: "topluluğumuz e spor ile alakalıdır daha çok içerik için bizi sosyal medya adreslerimizden takip etmeyi unutmayın", linkUrl: "https://www.instagram.com/comuespor/"},
@@ -58,6 +90,6 @@ var cards = [
 var cardContainer = document.getElementById("cardContainer"); // HTML'de belirtilen "cardContainer" ID'ye sahip elementi bul
 
 cards.forEach(function(cardData) {
-    var card = KartOlustur(cardData.baslik, cardData.ResimUrl, cardData.icerik, cardData.linkUrl); // Her kart için KartOlustur fonksiyonunu kullanarak bir kart oluştur
+    var card = KartOlustur(cardData.baslik, cardData.ResimUrl, cardData.icerik, cardData.linkUrl,cardData.instagram,cardData.twitter); // Her kart için KartOlustur fonksiyonunu kullanarak bir kart oluştur
     cardContainer.appendChild(card); // Oluşturulan kartı "cardContainer" elementine ekle
 });

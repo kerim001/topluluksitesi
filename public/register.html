@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kayıt Ol</title>
+</head>
+<body>
+    <header>
+        <div class="headerr">
+            <a href="http://www.comu.edu.tr" baslik="Çanakkale Onsekiz Mart Üniversitesi">
+                <img class="logo" alt="Çanakkale Onsekiz Mart Üniversitesi" src="https://cdn.comu.edu.tr/cms/tema/ortak/img/logo.png">
+            </a>
+            <h4 class="ana_baslik">Çanakkale Onsekiz Mart Üniversitesi Kulüpleri</h4>
+            <div class="nav_bar">
+                <div>
+                    <a href="index.html">
+                        <h4>Anasayfa</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="login.html">
+                        <h4 class="login_h4">Yetkili Giriş</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="takvim.html">
+                        <h4 class="takvim_h4">Takvim</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="register.html">
+                        <h4 class="takvim_h4">Kayıt</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.comu.edu.tr/duyurular.html">
+                        <h4 class="takvim_h4">Duyurular</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="form-container">
+        <h2>Kayıt Formu</h2>
+        <form class="form" id="registerForm">
+            <label for="firstName">İsim:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Soyisim:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Telefon Numarası:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="club">Kulüp Seçiniz:</label>
+            <select id="club" name="club" required>
+                <option value="">Kulüp Seçiniz</option>
+            </select>
+            <button type="submit">Gönder</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="kulupler.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                club: document.getElementById('club').value
+            };
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
